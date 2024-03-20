@@ -1,6 +1,7 @@
 # mypy: disallow_untyped_defs=False
 from ._abstract import AbstractScraper
-from ._utils import get_yields, normalize_string
+from ._utils import get_yields, normalize_string, get_minutes
+import re
 
 
 class StreetKitchen(AbstractScraper):
@@ -12,7 +13,11 @@ class StreetKitchen(AbstractScraper):
         return self.soup.find("h1", {"class": "entry-title"}).get_text()
 
     def total_time(self):
-        return None
+        try:
+            time = self.soup.find(["li", "p"], text=re.compile('Elkészítési idő:.*|Elkészítés.*:.*')).get_text()
+            return get_minutes(time)
+        except AttributeError:
+            pass
 
     def image(self):
         return (

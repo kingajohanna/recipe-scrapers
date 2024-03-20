@@ -245,6 +245,12 @@ class SchemaOrg:
             for item in schema_item.get("itemListElement"):
                 instructions_gist += self._extract_howto_instructions_text(item)
         return instructions_gist
+    
+    def reviews(self):
+        review = self.data.get("review")
+        if review is None:
+            raise SchemaOrgException("No description data in SchemaOrg.")
+        return normalize_string(review)
 
     def instructions(self):
         instructions = self.data.get("recipeInstructions") or ""

@@ -1,11 +1,18 @@
 # mypy: disallow_untyped_defs=False
 import inspect
+from email import header
+import imp
 from collections import OrderedDict
 from typing import Dict, List, Optional, Tuple, Union
 from urllib.parse import urljoin
 
-import requests
+import aiohttp
+import ssl
+import certifi
+import asyncio
+import logging
 from bs4 import BeautifulSoup
+from typing import Any
 
 from recipe_scrapers.settings import settings
 
@@ -21,8 +28,16 @@ HEADERS = {
 class AbstractScraper:
     page_data: Union[str, bytes]
 
-    def __init__(
-        self,
+    @classmethod
+    async def create(cls, url: Union[str, None], options: dict[str, Any]):
+        self = cls()
+        await self._scrape(url, **options)
+        return self
+
+    def __init__(self):
+        self.logger = logging.getLogger("AbstractScraper")
+
+    async def _scrape(self, 
         url: Union[str, None],
         proxies: Optional[
             Dict[str, str]
@@ -37,15 +52,17 @@ class AbstractScraper:
             self.page_data = html
             self.url = url
         else:
-            assert url is not None, "url required for fetching recipe data"
-            resp = requests.get(
-                url,
-                headers=HEADERS,
-                proxies=proxies,
-                timeout=timeout,
-            )
-            self.page_data = resp.content
-            self.url = resp.url
+            try:
+                assert url is not None, "url required for fetching recipe data"   
+                ssl_context = ssl.create_default_context(cafile=certifi.where())
+                conn = aiohttp.TCPConnector(ssl=ssl_context)         
+                async with aiohttp.ClientSession(connector=conn) as client:
+                    async with client.get(url, headers=HEADERS, proxy=proxies, timeout=timeout) as resp:
+                        assert resp.status == 200
+                        self.url = resp.url
+                        self.page_data = await resp.read()
+            except AssertionError as ae:
+                self.logger.info(f'Invalid URL or unavailable')
 
         self.wild_mode = wild_mode
         self.soup = BeautifulSoup(self.page_data, "html.parser")
@@ -69,7 +86,7 @@ class AbstractScraper:
     def canonical_url(self):
         canonical_link = self.soup.find("link", {"rel": "canonical", "href": True})
         if canonical_link:
-            return urljoin(self.url, canonical_link["href"])
+            return urljoin(str(self.url), canonical_link["href"])
         return self.url
 
     def title(self):

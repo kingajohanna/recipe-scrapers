@@ -185,6 +185,8 @@ def get_equipment(equipment_items):
 def normalize_string(string):
     # Convert all named and numeric character references (e.g. &gt;, &#62;)
     unescaped_string = html.unescape(string)
+    if isinstance(unescaped_string, list):
+        unescaped_string = unescaped_string[0]
     return re.sub(
         r"\s+",
         " ",

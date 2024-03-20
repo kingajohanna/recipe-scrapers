@@ -648,7 +648,7 @@ def scraper_exists_for(url_path: str) -> bool:
     return host_name in get_supported_urls()
 
 
-def scrape_me(url_path: str, **options: Any) -> AbstractScraper:
+async def scrape_me(url_path: str, **options: Any) -> AbstractScraper:
     host_name = get_host_name(url_path)
 
     try:
@@ -663,7 +663,7 @@ def scrape_me(url_path: str, **options: Any) -> AbstractScraper:
                 raise NoSchemaFoundInWildMode(url_path)
             return wild_scraper
 
-    return scraper(url_path, **options)
+    return await scraper.create(url_path, options)
 
 
 def scrape_html(
