@@ -307,3 +307,22 @@ class SchemaOrg:
         if description and isinstance(description, list):
             description = description[0]
         return normalize_string(description)
+    
+    def calories(self):
+        calories = self.data.get("nutrition", {})
+        if calories is None:
+            raise SchemaOrgException("No calories data in SchemaOrg.")
+        return calories.get("calories")
+
+    def difficulty(self):
+        difficulty = self.data.get("difficulty")
+        if difficulty is None:
+            raise SchemaOrgException("No difficulty data in SchemaOrg.")
+        return difficulty
+    
+    def video(self):
+        print(self.data)
+        video = self.data.get("video")
+        if video is None:
+            return None
+        return video.get("embedUrl")

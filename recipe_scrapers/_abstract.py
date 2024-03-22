@@ -183,6 +183,15 @@ class AbstractScraper:
 
     def equipment(self):
         raise NotImplementedError("This should be implemented.")
+    
+    def calories(self):
+        raise NotImplementedError("This should be implemented.")
+
+    def difficulty(self):
+        raise NotImplementedError("This should be implemented.")
+    
+    def video(self):
+        return None
 
     def links(self):
         invalid_href = {"#", ""}

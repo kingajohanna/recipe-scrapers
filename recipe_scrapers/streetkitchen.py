@@ -27,15 +27,23 @@ class StreetKitchen(AbstractScraper):
         )
 
     def ingredients(self):
-        ingredients_raw = self.soup.findAll("dd")
+        ingredient_groups = self.soup.findAll("div", {"class": "ingredient-group"})
         ingredients = []
         # There are separate sets of ingredients for desktop and mobile view
-        for ingredient in ingredients_raw[: int(len(ingredients_raw) / 2)]:
-            ingredients.append(normalize_string(ingredient.get_text()).strip())
+        for ingredient_group_raw in ingredient_groups:
+            ingredient_group = ingredient_group_raw.findAll("dd")
+            for ingredient in ingredient_group:
+                ingredients.append(normalize_string(ingredient.get_text()).strip())
+        ingredients = list(set(ingredients))
         return ingredients
 
     def instructions(self):
-        instructions = self.soup.find("div", {"class": "the-content-div"}).findAll("p")
+        def is_valid_paragraph(tag):
+            return 'Ha tetszett' not in tag.text and not tag.find('a')
+
+        content_div = self.soup.find("div", {"class": "the-content-div"})
+        content_p = content_div.find_all("p", recursive=False)
+        instructions = [p for p in content_p if is_valid_paragraph(p)]
 
         instructions_arr = []
         for instruction in instructions:
@@ -51,3 +59,18 @@ class StreetKitchen(AbstractScraper):
         return get_yields(
             self.soup.find("span", {"class": "quantity-number"}).get_text()
         )
+
+    def calories(self):
+        return self.schema.calories()
+
+    def difficulty(self):
+        return self.schema.difficulty()
+    
+    def video(self):
+        iframe_tags = self.soup.find_all('iframe', {'frameborder': '0'})
+        video = None
+        for iframe in iframe_tags:
+            if 'youtube' in iframe.get('src'):
+                print(iframe.get('src'))
+                video = iframe.get('src')
+        return video

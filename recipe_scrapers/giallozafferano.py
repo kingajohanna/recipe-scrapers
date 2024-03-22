@@ -24,3 +24,6 @@ class GialloZafferano(AbstractScraper):
 
     def ratings(self):
         return self.schema.ratings()
+    
+    def video(self):
+        return self.schema.video()
