@@ -245,6 +245,8 @@ def normalize_string(string):
     unescaped_string = html.unescape(string)
     # Remove HTML tags
     no_html_string = re.sub("<[^>]*>", "", unescaped_string)
+    if isinstance(unescaped_string, list):
+        unescaped_string = unescaped_string[0]
     return re.sub(
         r"\s+",
         " ",

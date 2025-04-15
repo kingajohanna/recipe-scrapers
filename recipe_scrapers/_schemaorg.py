@@ -267,6 +267,12 @@ class SchemaOrg:
             for item in schema_item.get("itemListElement"):
                 instructions_gist += self._extract_howto_instructions_text(item)
         return instructions_gist
+    
+    def reviews(self):
+        review = self.data.get("review")
+        if review is None:
+            raise SchemaOrgException("No description data in SchemaOrg.")
+        return normalize_string(review)
 
     def instructions(self):
         instructions = (
@@ -372,3 +378,22 @@ class SchemaOrg:
         final_diets = csv_to_tags(formatted_diets)
 
         return final_diets
+    
+    def calories(self):
+        calories = self.data.get("nutrition")
+        if calories is None:
+            raise SchemaOrgException("No calories data in SchemaOrg.")
+        return calories.get("calories")
+
+    def difficulty(self):
+        difficulty = self.data.get("difficulty")
+        if difficulty is None:
+            raise SchemaOrgException("No difficulty data in SchemaOrg.")
+        return difficulty
+    
+    def video(self):
+        print(self.data)
+        video = self.data.get("video")
+        if video is None:
+            return None
+        return video.get("embedUrl")

@@ -796,6 +796,7 @@ SCRAPERS = {
     NibbleDish.host(): NibbleDish,
     NHSHealthierFamilies.host(): NHSHealthierFamilies,
     NIHHealthyEating.host(): NIHHealthyEating,
+    NoSalty.host(): NoSalty,
     NYTimes.host(): NYTimes,
     NoRecipes.host(): NoRecipes,
     NoSalty.host(): NoSalty,
@@ -933,7 +934,6 @@ def get_supported_urls() -> set[str]:
 def scraper_exists_for(url_path: str) -> bool:
     host_name = get_host_name(url_path)
     return host_name in get_supported_urls()
-
 
 def scrape_html(
     html: str | None,

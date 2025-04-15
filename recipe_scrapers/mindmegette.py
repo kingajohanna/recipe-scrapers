@@ -31,15 +31,20 @@ class Mindmegette(AbstractScraper):
         shopping_cart = self.soup.find("ul", {"class": "shopingCart"}).findAll("li")
 
         for ingredient in shopping_cart:
-            amount_unit = (
-                ingredient.find("span", {"class": "ingredient-measure"})
-                .get("title")
-                .strip()
-            )
-            ingredient_name = (
-                ingredient.find("span", {"class": "ingredient-name"}).get_text().strip()
-            )
-            ingredients.append((amount_unit + " " + ingredient_name).strip())
+            try:
+                amount_unit = (
+                    ingredient.find("span", {"class": "ingredient-measure"})
+                    .get("title")
+                    .strip()
+                )
+                ingredient_name = (
+                    ingredient.find("span", {"class": "ingredient-name"}).get_text().strip()
+                )
+                ingredients.append((amount_unit + " " + ingredient_name).strip())
+            except AttributeError:
+                comment = ingredient.find("span", {"class": "comment"})
+                print(comment)
+                ingredients.append(comment)        
 
         return ingredients
 

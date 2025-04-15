@@ -1,8 +1,11 @@
 import inspect
+from email import header
+import imp
 from collections import OrderedDict
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
+from typing import Any
 
 from recipe_scrapers.__version__ import __version__
 from recipe_scrapers.settings import settings
@@ -49,7 +52,7 @@ class AbstractScraper:
         """Canonical or original URL of the recipe."""
         canonical_link = self.soup.find("link", {"rel": "canonical", "href": True})
         if canonical_link:
-            return urljoin(self.url, canonical_link["href"])
+            return urljoin(str(self.url), canonical_link["href"])
         return self.url
 
     def site_name(self):
@@ -178,6 +181,15 @@ class AbstractScraper:
 
     def keywords(self):
         """Keywords or tags used to describe the recipe"""
+        raise NotImplementedError("This should be implemented.")
+    
+    def calories(self):
+        raise NotImplementedError("This should be implemented.")
+
+    def difficulty(self):
+        raise NotImplementedError("This should be implemented.")
+    
+    def video(self):
         raise NotImplementedError("This should be implemented.")
 
     def links(self):
