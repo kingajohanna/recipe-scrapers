@@ -1,6 +1,5 @@
 import inspect
 from email import header
-import imp
 from collections import OrderedDict
 from urllib.parse import urljoin
 
