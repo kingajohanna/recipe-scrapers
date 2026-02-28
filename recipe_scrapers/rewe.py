@@ -1,5 +1,4 @@
 from ._abstract import AbstractScraper
-from ._utils import normalize_string
 
 
 class Rewe(AbstractScraper):
@@ -7,40 +6,20 @@ class Rewe(AbstractScraper):
     def host(cls):
         return "rewe.de"
 
-    def ingredients(self):
-        ingredient_list = self.soup.find("ul", {"id": "ingredient_list"})
-        list_items = ingredient_list.find_all("li", {"class": "ingredient_list_item"})
-        ingredients = []
-
-        for item in list_items:
-            amount_div = item.find("div", {"class": "formattedAmountDiv"})
-            amount = (
-                normalize_string(amount_div.get_text(strip=True)) if amount_div else ""
-            )
-
-            name_span = item.find("span", {"class": "break-words"})
-            name = normalize_string(name_span.get_text(strip=True)) if name_span else ""
-
-            if amount == "0":
-                ingredients.append(name)
-            else:
-                ingredient_text = f"{amount} {name}".strip()
-                ingredients.append(ingredient_text)
-
-        return ingredients
+    def equipment(self):
+        header = self.soup.find("h2", string="Utensilien")
+        if header:
+            section = header.find_parent("div")
+            if section:
+                tools = section.find("p", class_="kitchen-tools-entries")
+                if tools:
+                    text = tools.get_text(separator=",", strip=True)
+                    return [item.strip() for item in text.split(",") if item.strip()]
+        return []
 
     def instructions(self):
-        step_divs = self.soup.find_all("div", {"class": "step-ingredients"})
-        steps = []
-
-        for step in step_divs:
-            instruction = step.find(
-                "div",
-                {
-                    "class": "ld-rds mt-4 self-stretch text-sm leading-5 text-gray-1000 md:text-base lg:mt-6 lg:leading-6 [&_a:hover]:text-brand-800 [&_a]:underline [&_a]:underline-offset-3"
-                },
-            )
-
-            steps.append(instruction.get_text().strip())
-
-        return "\n".join(steps)
+        instructions = self.schema.instructions()
+        filtered_instructions = "\n".join(
+            line for line in instructions.split("\n") if not line.startswith("Schritt")
+        )
+        return filtered_instructions

@@ -6,22 +6,22 @@
   "language": "de",
   "title": "Wintergemüse-Gnocchi-Pfanne mit Kräuterdip",
   "ingredients": [
-    "800 g REWE Beste Wahl Gnocchi (Kühlregal)",
+    "800.0 g REWE Beste Wahl Gnocchi (Kühlregal)",
     "Salz",
-    "2 rote Zwiebeln",
+    "2.0 rote Zwiebeln",
     "0.5 Spitzkohl",
-    "2 Möhren",
-    "1 Stange(n) Lauch",
-    "1 Rote Bete (frisch)",
-    "50 g REWE Beste Wahl aromatische Walnüsse",
-    "2 EL Rohrzucker",
+    "2.0 Möhren",
+    "1.0 Stange(n) Lauch",
+    "1.0 Rote Bete (frisch)",
+    "50.0 g REWE Beste Wahl aromatische Walnüsse",
+    "2.0 EL Rohrzucker",
     "0.5 Bd. Schnittlauch",
     "0.5 Bd. Petersilie",
-    "400 g Quark (Halbfettstufe)",
+    "400.0 g Quark (Halbfettstufe)",
     "Pfeffer",
     "Zitronensaft",
-    "1 Prise(n) Zucker",
-    "3 EL Rapsöl",
+    "1.0 Prise(n) Zucker",
+    "3.0 EL Rapsöl",
     "Muskatnuss"
   ],
   "instructions_list": [
@@ -36,13 +36,17 @@
   "yields": "4 servings",
   "description": "Wir treiben es gerne bunt! Starte auch du mit einer ausgewogenen Familien-Mahlzeit durch. Hol dir das REWE Rezept für Wintergemüse-Gnocchi-Pfanne & Kräuterdip.",
   "total_time": 45,
-  "ratings": 4.69,
-  "ratings_count": 42,
+  "ratings": 4.7,
+  "ratings_count": 43,
+  "equipment": [
+    "Sparschäler",
+    "Hobel"
+  ],
   "nutrients": {
     "servingSize": "4 Portionen",
     "calories": "677 kcal"
   },
-  "image": "https://c.rewe-static.de/31535699/6/31535699.png",
+  "image": "https://c.rewe-static.de/31535699/6/31535699.png?impolicy=recipe-detail-page-header",
   "keywords": [
     "Vegetarisch",
     "Winter",
