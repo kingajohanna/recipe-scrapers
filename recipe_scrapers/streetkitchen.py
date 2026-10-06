@@ -153,7 +153,9 @@ class StreetKitchen(AbstractScraper):
     @staticmethod
     def _is_bold_lead_in(tag) -> bool:
         text = tag.get_text(" ", strip=True)
-        bold = " ".join(b.get_text(" ", strip=True) for b in tag.find_all(["strong", "b"]))
+        bold = " ".join(
+            b.get_text(" ", strip=True) for b in tag.find_all(["strong", "b"])
+        )
         return text == bold and text.endswith(":")
 
     @staticmethod
