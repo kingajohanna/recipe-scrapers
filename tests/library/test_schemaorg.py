@@ -51,6 +51,75 @@ MULTI_ENTITY_SCHEMA = """
   }
 ]
 """
+PROPERTY_VALUE_INGREDIENTS_SCHEMA = """
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "PropertyValue Recipe",
+  "recipeIngredient": [
+    "3 or 4 ripe bananas, smashed",
+    { "@type": "PropertyValue", "value": 1, "name": "egg" },
+    { "@type": "PropertyValue", "value": "3/4", "name": "sugar", "unitCode": "G21" },
+    { "@type": "PropertyValue", "value": "1/2", "name": "flour", "unitText": "cup" }
+  ],
+  "recipeInstructions": "Mix and bake."
+}
+"""
+
+HOWTO_SECTION_DICT_ITEM_LIST_ELEMENT_SCHEMA = """
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Section Dict Recipe",
+  "recipeIngredient": [],
+  "recipeInstructions": [
+    {"@type": "HowToStep", "text": "First step."},
+    {
+      "@type": "HowToSection",
+      "itemListElement": {"@type": "HowToStep", "text": "Wrapped step."}
+    }
+  ]
+}
+"""
+
+HOWTO_SECTION_EMPTY_SCHEMA = """
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Empty Section Recipe",
+  "recipeIngredient": [],
+  "recipeInstructions": [
+    {"@type": "HowToStep", "text": "First step."},
+    {"@type": "HowToSection"}
+  ]
+}
+"""
+
+HOWTO_SECTION_MIXED_ITEM_LIST_ELEMENT_SCHEMA = """
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Mixed Section Recipe",
+  "recipeIngredient": [],
+  "recipeInstructions": [
+    {"@type": "HowToStep", "text": "Prep."},
+    {
+      "@type": "HowToSection",
+      "name": "Standard section",
+      "itemListElement": [
+        {"@type": "HowToStep", "text": "List step one."},
+        {"@type": "HowToStep", "text": "List step two."}
+      ]
+    },
+    {
+      "@type": "HowToSection",
+      "name": "Wrapped section",
+      "itemListElement": {"@type": "HowToStep", "text": "Dict step."}
+    }
+  ]
+}
+"""
+
 BEST_IMAGE_SCHEMA = """
 {
   "@context": "https://schema.org",
@@ -68,6 +137,27 @@ BEST_IMAGE_SCHEMA = """
   ],
   "recipeIngredient": [],
   "recipeInstructions": []
+}
+"""
+
+DIETARY_RESTRICTIONS_SCHEMA = """
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Avocado panzanella",
+  "recipeIngredient": [],
+  "recipeInstructions": [],
+  "suitableForDiet": [
+    "https://schema.org/VegetarianDiet",
+    {
+      "@type": "Diet",
+      "name": "Vegan"
+    },
+    {
+      "@type": "Diet",
+      "name": "Mediterranean"
+    }
+  ]
 }
 """
 
@@ -91,6 +181,44 @@ class TestSchemaOrg(unittest.TestCase):
         self.assertIn("1 slice of bread", parser.ingredients())
         self.assertIn("5g margarine", parser.ingredients())
         self.assertEqual("spread the margarine on the bread", parser.instructions())
+
+    def test_property_value_ingredients(self):
+        page_data = JSONLD_PAGE_TEMPLATE.format(
+            jsonld=PROPERTY_VALUE_INGREDIENTS_SCHEMA
+        )
+        parser = SchemaOrg(page_data)
+        ingredients = parser.ingredients()
+        self.assertIn("3 or 4 ripe bananas, smashed", ingredients)
+        self.assertIn("1 egg", ingredients)
+        self.assertIn("3/4 G21 sugar", ingredients)
+        self.assertIn("1/2 cup flour", ingredients)
+
+    def test_howto_section_with_dict_item_list_element(self):
+        page_data = JSONLD_PAGE_TEMPLATE.format(
+            jsonld=HOWTO_SECTION_DICT_ITEM_LIST_ELEMENT_SCHEMA
+        )
+        parser = SchemaOrg(page_data)
+        self.assertEqual("First step.\nWrapped step.", parser.instructions())
+
+    def test_howto_section_with_missing_item_list_element(self):
+        page_data = JSONLD_PAGE_TEMPLATE.format(jsonld=HOWTO_SECTION_EMPTY_SCHEMA)
+        parser = SchemaOrg(page_data)
+        self.assertEqual("First step.", parser.instructions())
+
+    def test_howto_section_with_mixed_item_list_element_shapes(self):
+        page_data = JSONLD_PAGE_TEMPLATE.format(
+            jsonld=HOWTO_SECTION_MIXED_ITEM_LIST_ELEMENT_SCHEMA
+        )
+        parser = SchemaOrg(page_data)
+        self.assertEqual(
+            "Prep.\n"
+            "Standard section\n"
+            "List step one.\n"
+            "List step two.\n"
+            "Wrapped section\n"
+            "Dict step.",
+            parser.instructions(),
+        )
 
     def test_best_image_selection(self):
         page_data = JSONLD_PAGE_TEMPLATE.format(jsonld=BEST_IMAGE_SCHEMA)
@@ -130,3 +258,12 @@ class TestSchemaOrg(unittest.TestCase):
             )
         finally:
             settings.BEST_IMAGE_SELECTION = original
+
+    def test_dietary_restrictions_with_diet_objects(self):
+        page_data = JSONLD_PAGE_TEMPLATE.format(jsonld=DIETARY_RESTRICTIONS_SCHEMA)
+        parser = SchemaOrg(page_data)
+
+        self.assertEqual(
+            ["Vegetarian Diet", "Vegan", "Mediterranean"],
+            parser.dietary_restrictions(),
+        )
