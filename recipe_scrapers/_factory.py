@@ -46,15 +46,6 @@ class SchemaScraperFactory:
 
         def description(self):
             return self.schema.description()
-        
-        def calories(self):
-            return self.schema.calories()
-
-        def difficulty(self):
-            return self.schema.difficulty()
-        
-        def video(self):
-            return self.schema.video()
 
     @classmethod
     def generate(cls, html, url, best_image: Optional[bool] = None):

@@ -41,8 +41,6 @@ ON_EXCEPTION_RETURN_VALUES = {
     "links": None,
     "language": None,
     "nutrients": None,
-    "calories": None,
-    "difficulty": None,
 }
 
 

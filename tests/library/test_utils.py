@@ -101,10 +101,12 @@ class TestUtils(unittest.TestCase):
             "prep_time",
             "ratings",
             "ratings_count",
+            "reviews",
             "site_name",
             "title",
             "total_time",
             "video",
+            "videos",
             "yields",
         ]
         public_methods = [
@@ -151,7 +153,9 @@ class TestUtils(unittest.TestCase):
             "keywords",
             "calories",
             "difficulty",
+            "reviews",
             "video",
+            "videos",
         ]
         self.assertEqual((expected_methods), (abstract_methods))
 

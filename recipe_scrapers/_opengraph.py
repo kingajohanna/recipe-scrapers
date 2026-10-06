@@ -19,3 +19,10 @@ class OpenGraph:
             raise OpenGraphException("Image not found in OpenGraph metadata.")
 
         return image.get("content")
+
+    def video(self):
+        for prop in ("og:video:secure_url", "og:video:url", "og:video"):
+            meta = self.soup.find("meta", {"property": prop, "content": True})
+            if meta and meta["content"].strip():
+                return meta["content"].strip()
+        return None

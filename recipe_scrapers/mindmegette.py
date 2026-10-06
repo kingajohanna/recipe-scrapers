@@ -1,4 +1,5 @@
 from ._abstract import AbstractScraper
+from ._exceptions import ElementNotFoundInHtml
 from ._utils import normalize_string
 
 
@@ -22,3 +23,12 @@ class Mindmegette(AbstractScraper):
             for step in steps
             if isinstance(step, dict) and step.get("text")
         )
+
+    def difficulty(self):
+        # Under the title: a "recept" label (with a title attribute), then the difficulty
+        label = self.soup.select_one(
+            ".recipe-categories mindmegette-category-label:not([title])"
+        )
+        if not label:
+            raise ElementNotFoundInHtml("difficulty")
+        return normalize_string(label.get_text())

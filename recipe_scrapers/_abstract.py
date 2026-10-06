@@ -1,11 +1,10 @@
 import inspect
-from email import header
+import threading
 from collections import OrderedDict
 from typing import Optional
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
-from typing import Any
 
 from recipe_scrapers.__version__ import __version__
 from recipe_scrapers.settings import settings
@@ -14,11 +13,15 @@ from ._exceptions import ElementNotFoundInHtml
 from ._grouping_utils import group_ingredients, IngredientGroup
 from ._opengraph import OpenGraph
 from ._schemaorg import SchemaOrg
+from ._videos import best_video_url, find_videos
 
 # Some sites close their content for 'bots', so user-agent must be supplied
 HEADERS = {
     "User-Agent": f"Mozilla/5.0 (compatible; Windows NT 10.0; Win64; x64; rv:{__version__}) recipe-scrapers/{__version__}"
 }
+
+# Scrapers may be created on several threads at once (see aio.py)
+_plugins_lock = threading.Lock()
 
 
 class AbstractScraper:
@@ -38,14 +41,15 @@ class AbstractScraper:
         )
 
         # attach the plugins as instructed in settings.PLUGINS
-        if not hasattr(self.__class__, "plugins_initialized"):
-            for name, _ in inspect.getmembers(self, inspect.ismethod):
-                current_method = getattr(self.__class__, name)
-                for plugin in reversed(settings.PLUGINS):
-                    if plugin.should_run(self.host(), name):
-                        current_method = plugin.run(current_method)
-                setattr(self.__class__, name, current_method)
-            setattr(self.__class__, "plugins_initialized", True)
+        with _plugins_lock:
+            if not hasattr(self.__class__, "plugins_initialized"):
+                for name, _ in inspect.getmembers(self, inspect.ismethod):
+                    current_method = getattr(self.__class__, name)
+                    for plugin in reversed(settings.PLUGINS):
+                        if plugin.should_run(self.host(), name):
+                            current_method = plugin.run(current_method)
+                    setattr(self.__class__, name, current_method)
+                setattr(self.__class__, "plugins_initialized", True)
 
     def author(self):
         """Author of the recipe."""
@@ -55,7 +59,7 @@ class AbstractScraper:
         """Canonical or original URL of the recipe."""
         canonical_link = self.soup.find("link", {"rel": "canonical", "href": True})
         if canonical_link:
-            return urljoin(str(self.url), canonical_link["href"])
+            return urljoin(self.url, canonical_link["href"])
         return self.url
 
     def site_name(self):
@@ -181,15 +185,40 @@ class AbstractScraper:
     def keywords(self):
         """Keywords or tags used to describe the recipe"""
         raise NotImplementedError("This should be implemented.")
-    
+
     def calories(self):
-        raise NotImplementedError("This should be implemented.")
+        """Calories per serving as the site states them, e.g. "250 kcal"."""
+        calories = self.nutrients().get("calories")
+        if not calories:
+            raise ElementNotFoundInHtml("calories")
+        return calories
 
     def difficulty(self):
+        """How hard the recipe is to make, in the site's own words."""
         raise NotImplementedError("This should be implemented.")
-    
-    def video(self):
+
+    def reviews(self) -> list[dict[str, str]]:
+        """Reviews of the recipe, each with its author, rating, body and date when given."""
         raise NotImplementedError("This should be implemented.")
+
+    def video(self) -> Optional[str]:
+        """URL of the recipe's video, or None when the page has none.
+
+        A YouTube watch URL or a media file (.mp4, .m3u8, ...) is preferred, as
+        apps can play those as is; otherwise it is the site's embed or page URL.
+        """
+        return best_video_url(self._videos())
+
+    def videos(self) -> list[dict]:
+        """Every video found on the page, the recipe's own first.
+
+        Each has the url to play, content_url, embed_url, thumbnail_url, name,
+        duration (in seconds) and upload_date; those the page lacks are None.
+        """
+        return [video for tier in self._videos() for video in tier]
+
+    def _videos(self):
+        return find_videos(self.schema, self.opengraph, self.soup, self.canonical_url())
 
     def links(self):
         """Links found in the recipe."""

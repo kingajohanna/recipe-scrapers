@@ -22,6 +22,17 @@ SCHEMA_ORG_HOST = "schema.org"
 SYNTAXES = ["json-ld", "microdata"]
 
 
+def _nodes(value):
+    """Every dict in value, nested ones included."""
+    if isinstance(value, dict):
+        yield value
+        for item in value.values():
+            yield from _nodes(item)
+    elif isinstance(value, list):
+        for item in value:
+            yield from _nodes(item)
+
+
 class SchemaOrg:
     @staticmethod
     def _contains_schematype(item, schematype):
@@ -79,6 +90,14 @@ class SchemaOrg:
                     rating_id = rating.get("@id")
                     if rating_id:
                         self.ratingsdata[rating_id] = rating
+
+        # Extract every video, wherever it is nested
+        self.video_objects = [
+            node
+            for syntax in SYNTAXES
+            for node in _nodes(data.get(syntax, []))
+            if self._contains_schematype(node, "VideoObject")
+        ]
 
         for syntax in SYNTAXES:
             for item in data.get(syntax, []):
@@ -297,12 +316,6 @@ class SchemaOrg:
             for item in elements:
                 instructions_gist += self._extract_howto_instructions_text(item)
         return instructions_gist
-    
-    def reviews(self):
-        review = self.data.get("review")
-        if review is None:
-            raise SchemaOrgException("No description data in SchemaOrg.")
-        return normalize_string(review)
 
     def instructions(self):
         instructions = (
@@ -415,22 +428,66 @@ class SchemaOrg:
         final_diets = csv_to_tags(formatted_diets)
 
         return final_diets
-    
-    def calories(self):
-        calories = self.data.get("nutrition")
-        if calories is None:
-            raise SchemaOrgException("No calories data in SchemaOrg.")
-        return calories.get("calories")
+
+    def recipe_videos(self):
+        """The recipe's VideoObjects, with references to other nodes resolved."""
+        videos = self.data.get("video") or []
+        if not isinstance(videos, list):
+            videos = [videos]
+
+        by_id = {v["@id"]: v for v in self.video_objects if v.get("@id")}
+        resolved = []
+        for video in videos:
+            if isinstance(video, str):
+                video = by_id.get(video, {"url": video})
+            elif isinstance(video, dict) and video.keys() <= {"@id", "@type"}:
+                video = by_id.get(video.get("@id"), video)
+            if isinstance(video, dict):
+                resolved.append(video)
+        return resolved
+
+    def page_videos(self):
+        """VideoObjects elsewhere on the page, which may or may not be the recipe's."""
+        recipe_videos = self.recipe_videos()
+        return [v for v in self.video_objects if v not in recipe_videos]
 
     def difficulty(self):
-        difficulty = self.data.get("difficulty")
-        if difficulty is None:
-            raise SchemaOrgException("No difficulty data in SchemaOrg.")
-        return difficulty
-    
-    def video(self):
-        print(self.data)
-        video = self.data.get("video")
-        if video is None:
-            return None
-        return video.get("embedUrl")
+        # Not a schema.org Recipe property, but some sites add one anyway
+        for key in ("difficulty", "recipeDifficulty", "difficultyLevel"):
+            difficulty = self.data.get(key)
+            if isinstance(difficulty, str) and difficulty.strip():
+                return normalize_string(difficulty)
+        raise SchemaOrgException("No difficulty data in SchemaOrg.")
+
+    def reviews(self):
+        reviews = self.data.get("review") or []
+        if not isinstance(reviews, list):
+            reviews = [reviews]
+
+        result = []
+        for review in reviews:
+            if not isinstance(review, dict):
+                continue
+            author = review.get("author")
+            if isinstance(author, list):
+                author = author[0] if author else None
+            if isinstance(author, dict):
+                author = self.people.get(author.get("@id"), author).get("name")
+            rating = review.get("reviewRating")
+            if isinstance(rating, dict):
+                rating = rating.get("ratingValue")
+            body = review.get("reviewBody") or review.get("description")
+            entry = {
+                "author": author,
+                "rating": rating,
+                "body": body,
+                "date": review.get("datePublished"),
+            }
+            entry = {
+                key: normalize_string(str(value))
+                for key, value in entry.items()
+                if isinstance(value, (str, int, float)) and str(value).strip()
+            }
+            if "body" in entry or "rating" in entry:
+                result.append(entry)
+        return result
