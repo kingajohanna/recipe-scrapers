@@ -44,6 +44,10 @@ dependencies = [
 online = [
     "requests>=2.31.0",
 ]
+# Async API (recipe_scrapers.aio), for asyncio apps such as web backends
+async = [
+    "aiohttp >= 3.9",
+]
 # Documentation dependencies
 # Install these to build and serve the documentation:
 #   pip install -e ".[docs]"
@@ -72,6 +76,7 @@ docs = [
 tests = [
     "coverage >= 7.6.9",           # Code coverage measurement tool
     "unittest-parallel >= 1.7.0",  # Run unittest tests in parallel
+    "aiohttp >= 3.9",              # Tests of the async API
 ]
 linters = [
     "pre-commit == 4.0.1",    # latest from PyPI
@@ -86,7 +91,7 @@ dev = [
     "recipe-scrapers[docs,tests,linters]",
 ]
 all = [
-    "recipe_scrapers[online,docs,tests,linters,dev]"
+    "recipe_scrapers[online,async,docs,tests,linters,dev]"
 ]
 
 
