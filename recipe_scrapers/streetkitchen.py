@@ -3,7 +3,7 @@ import re
 from ._abstract import AbstractScraper
 from ._exceptions import ElementNotFoundInHtml, SchemaOrgException
 from ._grouping_utils import IngredientGroup
-from ._utils import get_minutes
+from ._utils import get_minutes, normalize_string
 
 
 _STREETKITCHEN_TIME_UL_LI = re.compile(
@@ -26,6 +26,17 @@ class StreetKitchen(AbstractScraper):
         if any(spans):
             return " ".join(s for s in spans if s)
         return h1.get_text(" ", strip=True)
+
+    def keywords(self):
+        # The page's tags are its links to /cimkek/ ("reggeli", "tejberizs"), each shown twice (a
+        # carousel). The schema.org keywords is only the dish's name, and article:tag mixes the tags
+        # with the site's sections.
+        tags = []
+        for link in self.soup.select('a[href*="/cimkek/"]'):
+            tag = normalize_string(link.get_text(" ", strip=True))
+            if tag and tag.lower() not in (seen.lower() for seen in tags):
+                tags.append(tag)
+        return tags
 
     def ingredients(self):
         ingredients_list = []
