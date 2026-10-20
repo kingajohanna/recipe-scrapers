@@ -1,0 +1,46 @@
+name: deploy kookta
+
+# kookta's scraper installs this fork's main (scraper/scraper_service/requirements.txt in
+# kingajohanna/mealo). A push to main deploys it: the tests on the Python of the scraper's image,
+# then mealo's deploy-scraper workflow, which runs kookta's own tests before it deploys.
+# Needs the Actions secret KOOKTA_DEPLOY_TOKEN: a fine-grained token for kingajohanna/mealo only,
+# with the permission Actions: Read and write.
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# A newer push makes an older run pointless
+concurrency:
+  group: deploy-kookta
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install tests dependencies
+        run: pip install ".[tests]"
+      - name: Run Tests
+        env:
+          PYTHONWARNINGS: "always:::recipe_scrapers,ignore:::recipe_scrapers.plugins.static_values"
+        run: unittest-parallel --level test
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Deploy kookta's scraper
+        env:
+          GH_TOKEN: ${{ secrets.KOOKTA_DEPLOY_TOKEN }}
+        run: gh workflow run deploy-scraper.yml --repo kingajohanna/mealo --ref master
