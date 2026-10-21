@@ -235,3 +235,11 @@ class TestOtherFields(unittest.TestCase):
         self.assertEqual("https://www.youtube.com/watch?v=ytQ4UfQ-yOw", scraper.video())
         self.assertEqual("405.7 kcal", scraper.calories())
         self.assertEqual("Mester", scraper.difficulty())
+
+    def test_video_of_a_page_without_schema(self):
+        # lilafuge.hu's video posts embed the recipe's YouTube video above the title
+        html = pathlib.Path(
+            "tests/test_data/lilafuge.hu/lilafuge_2.testhtml"
+        ).read_text(encoding="utf-8")
+        scraper = scrape_html(html, org_url="https://lilafuge.hu/tokehal-mezes-pacban/")
+        self.assertEqual("https://www.youtube.com/watch?v=vz1kaCh3RAg", scraper.video())

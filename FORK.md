@@ -10,6 +10,7 @@ backs mealo's scraper service (`mealo/scraper/scraper_service`). It adds:
 - **Fixes for Hungarian sites:** streetkitchen.hu (clean titles, no related-recipe
   links in the instructions, and the page's own tags as keywords instead of the dish's
   name) and mindmegette.hu (rewritten for the redesigned site).
+- **Scrapers upstream doesn't have:** lilafuge.hu.
 
 ## Using it from asyncio
 

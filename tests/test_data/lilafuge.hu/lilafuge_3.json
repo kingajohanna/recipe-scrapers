@@ -1,0 +1,85 @@
+{
+  "author": "Havas Dóra",
+  "canonical_url": "https://lilafuge.hu/tiramisu-torta-egyszeruen/",
+  "site_name": "Lila füge",
+  "host": "lilafuge.hu",
+  "language": "hu",
+  "title": "Tiramisu torta egyszerűen",
+  "ingredients": [
+    "1,5 dl víz",
+    "1 dl kávé",
+    "10 dkg finomítatlan nádcukor",
+    "10 dkg kristálycukor",
+    "opcionális: brandy vagy whisky",
+    "8 tojas",
+    "20 dkg cukor",
+    "4 evőkanál kávészirup",
+    "4 evőkanál olvasztott vaj",
+    "25 dkg liszt",
+    "1 csipet só",
+    "2 tojássárgája",
+    "50 g cukor",
+    "1 csipet só",
+    "30 dkg mascarpone",
+    "3 dl habtejszín",
+    "kb. 6 evőkanál cukrozatlan kakaópor"
+  ],
+  "ingredient_groups": [
+    {
+      "ingredients": [
+        "1,5 dl víz",
+        "1 dl kávé",
+        "10 dkg finomítatlan nádcukor",
+        "10 dkg kristálycukor",
+        "opcionális: brandy vagy whisky"
+      ],
+      "purpose": "A kávésziruphoz"
+    },
+    {
+      "ingredients": [
+        "8 tojas",
+        "20 dkg cukor",
+        "4 evőkanál kávészirup",
+        "4 evőkanál olvasztott vaj",
+        "25 dkg liszt",
+        "1 csipet só"
+      ],
+      "purpose": "A piskótához"
+    },
+    {
+      "ingredients": [
+        "2 tojássárgája",
+        "50 g cukor",
+        "1 csipet só",
+        "30 dkg mascarpone",
+        "3 dl habtejszín"
+      ],
+      "purpose": "A krémhez"
+    },
+    {
+      "ingredients": [
+        "kb. 6 evőkanál cukrozatlan kakaópor"
+      ],
+      "purpose": "Az összeállításhoz"
+    }
+  ],
+  "instructions_list": [
+    "A tortaformák aljára sütőpapírt teszünk. A sütőt 180 fokra előmelegítjük.",
+    "A szirup hozzávalóit kisebb lábasba tesszük és addig főzzük, amíg a cukor feloldódik. Ezután teljesen kihűtjük és félretesszük.",
+    "A krémhez habverővel habosra keverjük a mascarponét, hozzáadjuk a tojássárgáját, a cukrot és tovább habosítjuk. Végül a habtejszínt és beleöntjük és habosra keverjük, vigyázva, hogy ne verjük túl. Ha stabil a krém, letakarjuk és behűtjük.",
+    "A piskótához kettéválasztjuk a tojásokat. A tojásfehérjét kemény habbá verjük a sóval és a cukorral. A tojássárgáját egy keverőtálban összekeverjük az olvasztott vajjal és a kávésziruppal, majd a felvert habhoz adjuk és tovább verjük. Amikor habos, beleszitáljuk a lisztet és spatulával óvatosan összeforgatjuk. Elosztjuk a két tortaforma között a masszát és a180 fokra előmelegített sütőben 30 percig sütjük, majd szúrópróbát végzünk és ha kell, tovább sütjük. Amikor megsült, kivesszük a sütőből és hagyjuk teljesen kihűlni, majd mindkét tortalapot kettévágunk, hogy 4 lapot kapjunk.",
+    "Minden lapot bőven meglocsolunk kávésziruppal, majd megkenjük a krém negyedével és megszórjuk 2 evőkanál kakaóval. A tetejére krém és kakaó kerüljön. Szeletelés előtt legelább 1 órára tegyük a hűtőbe."
+  ],
+  "description": "Olaszország elsőszámú desszertje a tiramisu, amit most torta formában képzeltünk el. A fő hozzávalók ugyanazok: mascarpone, kávé és piskóta, csak az arányokon és a formán változtattunk egy kicsit, hogy egy tirmisu imádónak a kedvenc szülinapi tortáját készíthessük el. Mondanunk se kell, hogy az alkalom bármi lehet... például most hétvégén pont jó lesz hangulatjavítónak is, ugye?",
+  "equipment": [
+    "2 db 22 cm-es tortaforma"
+  ],
+  "image": "https://lilafuge.hu/wp-content/uploads/2021/03/IMG_0598-640x480.jpg",
+  "keywords": [
+    "Costa",
+    "kávé",
+    "tiramisu",
+    "tiramisu torta",
+    "torta"
+  ]
+}
