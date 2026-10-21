@@ -1,0 +1,71 @@
+{
+  "author": "Vogel Diana",
+  "canonical_url": "https://lilafuge.hu/szolozseles-joghurtfagyis-zabszendvics/",
+  "site_name": "Lila füge",
+  "host": "lilafuge.hu",
+  "language": "hu",
+  "title": "Szőlőzselés, joghurtfagyis zabszendvics",
+  "ingredients": [
+    "10 dkg olvasztott vaj",
+    "1 evőkanál méz",
+    "1 tojás",
+    "10 dkg világos nádcukor",
+    "10 dkg liszt",
+    "1 mokkáskanál szódabikarbóna",
+    "1 csipet só",
+    "10 dkg aprószemű zabpehely",
+    "3 evőkanál apró szemű aranymazsola",
+    "1 közepes méretű, kezeletlen citrom reszelt héja",
+    "0,5 kg natúr, krémes joghurt",
+    "ízlés szerint pár evőkanál méz vagy agave szirup az édesítéshez",
+    "3 dl othello szőlő préselt és átszűrt leve",
+    "8 dkg világos nádcukor",
+    "1 közepes méretű, kezeletlen citrom leve"
+  ],
+  "ingredient_groups": [
+    {
+      "ingredients": [
+        "10 dkg olvasztott vaj",
+        "1 evőkanál méz",
+        "1 tojás",
+        "10 dkg világos nádcukor",
+        "10 dkg liszt",
+        "1 mokkáskanál szódabikarbóna",
+        "1 csipet só",
+        "10 dkg aprószemű zabpehely",
+        "3 evőkanál apró szemű aranymazsola",
+        "1 közepes méretű, kezeletlen citrom reszelt héja"
+      ],
+      "purpose": "A zabkekszhez"
+    },
+    {
+      "ingredients": [
+        "0,5 kg natúr, krémes joghurt",
+        "ízlés szerint pár evőkanál méz vagy agave szirup az édesítéshez"
+      ],
+      "purpose": "A joghurt fagylalthoz"
+    },
+    {
+      "ingredients": [
+        "3 dl othello szőlő préselt és átszűrt leve",
+        "8 dkg világos nádcukor",
+        "1 közepes méretű, kezeletlen citrom leve"
+      ],
+      "purpose": "A szőlőzseléhez"
+    }
+  ],
+  "instructions_list": [
+    "A sütőt előmelegíjük 180 0C fokra. Az olvasztott vajat a mézzel, a tojással, a nádcukorral és a citromhéjjal habos krémmé keverjük. A lisztet elkeverjük a sóval, a szódabikarbónával, a zabpehellyel és a megmosott és leszárított aranymazsolával. A száraz és a nedves keveréket vegyítjük egymással és sütőpapírral fedett sütőlemezre terítjük és kb 12 perc alatt megsütjük. A zabsütit kihűtjük.",
+    "A joghurtot és a mézet elektromos habeverővel pár percig habosra mixeljük.",
+    "A szőlőlevet a cukorral lekvár sűrűségűre főzzük, majd hozáadjuk a citromlevet is, kihűtjük.",
+    "A szeletek összeállítása: Egy műanyag, egyenesfalú edényt olajozzunk ki, terítsünk bele folpackot. A zabsütit törjük morzsásra és terítsünk belőle fél centiméter magas, egyenletes réteget a doboz aljára. Kissé tömörítük ujjainkkal. Óvatosan öntsük rá a joghurtos keveréket és a fagyasztóban hagyjuk kb. 10 percig dermedni, majd egy kanál segítségével oszlassuk el rajta a szőlőzselét és fedjük be a tetejét is a zabmorzsával egyenletesen. Műanyagfóliával takarjuk be és hagyjuk teljesen kifagyni. Fogyasztáskor, egy pillanatra állítsuk a dobozt meleg vízbe, majd emeljük ki a fóliával együtt a fagyit és csomagoljuk ki. Éles késsel vágjunk kb. 5×10 cm-es, egyforma szeleteket és azonnal osszuk szét."
+  ],
+  "image": "https://lilafuge.hu/wp-content/uploads/2017/09/IMG_0015-730x480.jpg",
+  "keywords": [
+    "fagyi",
+    "szőlő",
+    "zab",
+    "zabkása",
+    "zabszelet"
+  ]
+}

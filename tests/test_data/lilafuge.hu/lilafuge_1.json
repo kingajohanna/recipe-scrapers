@@ -1,0 +1,87 @@
+{
+  "author": "Havas Dóra",
+  "canonical_url": "https://lilafuge.hu/lazacnyars-rizssalataval/",
+  "site_name": "Lila füge",
+  "host": "lilafuge.hu",
+  "language": "hu",
+  "title": "Rizssaláta fűszeres-pirított lazackockákkal",
+  "ingredients": [
+    "½ kg sütőtök",
+    "1 ek olívaolaj",
+    "1 tk só",
+    "4 tk frissen őrölt bors",
+    "20 dkg basmati rizs",
+    "1 alma",
+    "½ gránátalma",
+    "2 ek szárított vörösáfonya",
+    "2 ek pisztácia",
+    "3 ek almaecet",
+    "2 ek méz",
+    "6 ek extra szűz olívaolaj",
+    "2 ek kakukkfű",
+    "½ tk só",
+    "frissen őrölt bors",
+    "25 dkg lazacfilé",
+    "5 ek szójaszósz",
+    "1 ek méz",
+    "½ dl frissen facsart narancslé",
+    "2 gerezd fokhagyma",
+    "1 tk frissen reszelt gyömbér",
+    "1 tk csilipehely"
+  ],
+  "ingredient_groups": [
+    {
+      "ingredients": [
+        "½ kg sütőtök",
+        "1 ek olívaolaj",
+        "1 tk só",
+        "4 tk frissen őrölt bors",
+        "20 dkg basmati rizs",
+        "1 alma",
+        "½ gránátalma",
+        "2 ek szárított vörösáfonya",
+        "2 ek pisztácia"
+      ],
+      "purpose": "A rizssalátához"
+    },
+    {
+      "ingredients": [
+        "3 ek almaecet",
+        "2 ek méz",
+        "6 ek extra szűz olívaolaj",
+        "2 ek kakukkfű",
+        "½ tk só",
+        "frissen őrölt bors"
+      ],
+      "purpose": "A salátaöntethez"
+    },
+    {
+      "ingredients": [
+        "25 dkg lazacfilé",
+        "5 ek szójaszósz",
+        "1 ek méz",
+        "½ dl frissen facsart narancslé",
+        "2 gerezd fokhagyma",
+        "1 tk frissen reszelt gyömbér",
+        "1 tk csilipehely"
+      ],
+      "purpose": "A lazachoz"
+    }
+  ],
+  "instructions_list": [
+    "A lazacot falatnyi darabokra vágjuk, félretesszük. A többi hozzávalóból pácot készítünk és beleforgatjuk a lazacot. Fél órára vagy eéjszakára a hűtőbe tesszük. Fogyasztás előtt 10 perccel kivesszük a hűtőből, hogy szobahőmérsékletű legyen. Egy serpenyőben kevés olajat hevítünk és oldalanként 1-1 perc alatt piríosra sütjük.",
+    "A salátaöntet hozzávalóit egy kis tálba tesszük és krémesre keverjük.",
+    "A sütőtököt kis falatnyi kockákra vágjuk és sózzuk, borsozzuk. Egy nagyobb serpenyőben kevés olajat hevítük és rázogatva lepirítjuk benne a tököt. Akkor jó, ha megpuhul, de egy kicsit a közepe ruganyos marad. Egy nagy keverőtálba tesszük és hagyjuk langyosra hálni.",
+    "A rizst lobogó sós vízben kifőzzük, majd lecsepegtetjük és hagyjuk langyosra hűlni, majd az öntet 1/3 részét langyosan hozzáösszeforgatjuk. A tök mellé tesszük a keverőtálba, összeforgatjuk és hozzáadjuk a falatny darabokra vágott almát, és a durvára aprított pisztáciát is. A gránátalmát és a lazacot csak tálaláskor heylezzük a rizssaláta tetejére."
+  ],
+  "yields": "4 servings",
+  "description": "Salátának nevezzük, de valójában ez egy tartalmas étel egészséges, teljes értékű hozzávalókból. Nagyszerű vacsora egy szaladós nap végén, és természetesen a maradékot másnap elvihetjük magunkkal ebédre – melegítést sem igényel.",
+  "image": "https://lilafuge.hu/wp-content/uploads/2019/11/DSC_3999-730x480.jpg",
+  "keywords": [
+    "ebéd",
+    "könnyű",
+    "könnyű receptek",
+    "tudatos",
+    "vacsora"
+  ]
+}

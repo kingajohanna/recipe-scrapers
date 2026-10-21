@@ -1,0 +1,35 @@
+{
+  "author": "Bóta Évi",
+  "canonical_url": "https://lilafuge.hu/kapros-turos-burek/",
+  "site_name": "Lila füge",
+  "host": "lilafuge.hu",
+  "language": "hu",
+  "title": "Kapros-túrós burek",
+  "ingredients": [
+    "50 dkg túró",
+    "15 dkg tejföl",
+    "3 tojás, felverve (2 a töltelékbe, 1 a réteslap kenéséhez)",
+    "2 szál újhagyma",
+    "1 kis csokor kapor",
+    "1 csomag réteslap (6 db)",
+    "10 dkg vaj, olvasztva",
+    "só, bors"
+  ],
+  "instructions_list": [
+    "A túrót egy közepes méretű tálba tesszük, hozzáadjuk a tejfölt, 2 felvert tojást, valamint az apróra vágott újhagymát és a kaprot. Sózzuk, borsozzuk, majd megtöltjük vele a réteslapokat.",
+    "Két lapot egymás mellé helyezünk úgy, hogy körülbelül a lapok negyede lefedje egymást. Az egészet megkenjük olvasztott vajjal, majd egy vékony csíkban rátesszük a tölteléket.",
+    "Óvatosan feltekerjük, és csigát formázunk belőle, amit egy sütőpapírral lefedett tepsire teszünk. A tetejét megkenjük a maradék 1 felvert tojással. 200 fokra előmelegített sütőben 30‒35 perc alatt készre sütjük."
+  ],
+  "yields": "3 servings",
+  "description": "A burek a Balkán büszkesége, elkészítése országonként változik. Lehet sós vagy édes, húsos vagy akár fetás is. Én Szlovéniában szerettem bele a túrós változatba. A töltelék tovább színesíthető snidlinggel vagy más fűszernövénnyel.",
+  "image": "https://lilafuge.hu/wp-content/uploads/2019/02/burek-730x480.jpg",
+  "keywords": [
+    "kapor",
+    "réteslap",
+    "tejföl",
+    "tojás",
+    "túró",
+    "újhagyma",
+    "vaj"
+  ]
+}

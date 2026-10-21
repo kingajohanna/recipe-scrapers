@@ -1,0 +1,52 @@
+{
+  "author": "Havas Dóra",
+  "canonical_url": "https://lilafuge.hu/tokehal-mezes-pacban/",
+  "site_name": "Lila füge",
+  "host": "lilafuge.hu",
+  "language": "hu",
+  "title": "Tőkehal mézes pácban",
+  "ingredients": [
+    "2 dl méz",
+    "1 dl szójaszósz",
+    "4 evőkanál szezámolaj",
+    "0,8 dl almaecet",
+    "1 teáskanál frissen őrölt bors",
+    "1 teáskanál frissen reszelt gyömbér",
+    "80 dkg atlanti tőkehal filé",
+    "2 ek étolaj a sütéshez",
+    "2 evőkanál főtt rizs"
+  ],
+  "ingredient_groups": [
+    {
+      "ingredients": [
+        "2 dl méz",
+        "1 dl szójaszósz",
+        "4 evőkanál szezámolaj",
+        "0,8 dl almaecet",
+        "1 teáskanál frissen őrölt bors",
+        "1 teáskanál frissen reszelt gyömbér"
+      ],
+      "purpose": "A páchoz"
+    },
+    {
+      "ingredients": [
+        "80 dkg atlanti tőkehal filé",
+        "2 ek étolaj a sütéshez"
+      ],
+      "purpose": "A halhoz"
+    },
+    {
+      "ingredients": [
+        "2 evőkanál főtt rizs"
+      ],
+      "purpose": "A tálaláshoz"
+    }
+  ],
+  "instructions_list": [
+    "A pác hozzávalóit simára keverjük. A halfiléket – 4 nagyobb szelet – egy nagy tálba tesszük, amiben kényelmesen elférnek egymás mellett. A pácot a halra öntjük, megforgatjuk benne a szeleteket, majd legalább egy órára, de inkább egész éjszakára a hűtőbe tesszük. Idő közben néhányszor átforgatjk a halat. Sütés előtt 15 perccel kivesszük a hűtőből.",
+    "Egy serpenyőben 2 evőkanál olajat hevítünk. A halszeleteket lecsepegtetjük, majd a közepesen forró serpenyőben oldalanként 2 perc alatt kisütjük őket. Főtt rizzsel és pirított szezámmaggal meghintve tálaljuk."
+  ],
+  "yields": "4 servings",
+  "description": "A tőkehalat mézes, fűszeres pácban sütöttük ki, így lett egyszerre édeskésen omlós és ropogós. Köretként szinte bármit választhatunk, ezúttal rizzsel tálaltuk. Ha könnyed, gyors és összetett ízvilágú fogást készítenél, innen inspirálódhatsz!",
+  "image": "https://lilafuge.hu/wp-content/uploads/2019/11/IMG_3517-730x480.jpg"
+}
