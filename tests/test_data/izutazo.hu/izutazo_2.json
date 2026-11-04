@@ -1,0 +1,94 @@
+{
+  "author": "Ízutazó",
+  "canonical_url": "https://www.izutazo.hu/index.php/recipe/villamgyors-lepenyek-kenyer-helyett-is/",
+  "site_name": "Ízutazó",
+  "host": "izutazo.hu",
+  "language": "hu",
+  "title": "Villámgyors lepények (kenyér helyett is)",
+  "ingredients": [
+    "80 g teljeskiőrlésű liszt (nálam ez tönköly szokott lenni)",
+    "80 g fehér liszt (plusz a tészta nyújtásához)",
+    "1 teáskanál só",
+    "1 dl kézmeleg víz",
+    "vaj a kenéshez",
+    "80 g kukoricaliszt",
+    "90 g fehér liszt (plusz a tészta nyújtásához)",
+    "1 teáskanál só",
+    "110 ml kézmeleg víz",
+    "125 g teljeskiőrlésű liszt (nálam ez tönköly szokott lenni)",
+    "125 g fehér liszt (plusz a tészta nyújtásához)",
+    "1 teáskanál só",
+    "1 teáskanál őrölt római kömény",
+    "150 ml kézmeleg víz",
+    "1 evőkanál olívaolaj",
+    "150 g sima fehér liszt",
+    "75 g kókuszreszelék",
+    "1 teáskanál só",
+    "60 ml kókusztej (sűrű, krémes változat)",
+    "60 ml kézmeleg víz"
+  ],
+  "ingredient_groups": [
+    {
+      "ingredients": [
+        "80 g teljeskiőrlésű liszt (nálam ez tönköly szokott lenni)",
+        "80 g fehér liszt (plusz a tészta nyújtásához)",
+        "1 teáskanál só",
+        "1 dl kézmeleg víz",
+        "vaj a kenéshez"
+      ],
+      "purpose": "Csapáti (chapati) - Hozzávalók (8-10 db-hoz)"
+    },
+    {
+      "ingredients": [
+        "80 g kukoricaliszt",
+        "90 g fehér liszt (plusz a tészta nyújtásához)",
+        "1 teáskanál só",
+        "110 ml kézmeleg víz"
+      ],
+      "purpose": "Tortilla - Hozzávalók (10-12 db mini tortillához)"
+    },
+    {
+      "ingredients": [
+        "125 g teljeskiőrlésű liszt (nálam ez tönköly szokott lenni)",
+        "125 g fehér liszt (plusz a tészta nyújtásához)",
+        "1 teáskanál só",
+        "1 teáskanál őrölt római kömény",
+        "150 ml kézmeleg víz",
+        "1 evőkanál olívaolaj"
+      ],
+      "purpose": "Olívaolajos lepény - Hozzávalók (4-5 db-hoz)"
+    },
+    {
+      "ingredients": [
+        "150 g sima fehér liszt",
+        "75 g kókuszreszelék",
+        "1 teáskanál só",
+        "60 ml kókusztej (sűrű, krémes változat)",
+        "60 ml kézmeleg víz"
+      ],
+      "purpose": "Kókuszos roti - Hozzávalók (kb. 6 db-hoz)"
+    }
+  ],
+  "instructions_list": [
+    "Összekeverjük a liszteket a sóval majd hozzáadjuk a vizet. Elkezdjük kézzel összegyúrni a tésztát. Ha túl lágynak, ragacsosnak érezzük, akkor plusz liszt hozzáadásával javíthatunk az állagán. 2-3 perc gyúrás után szép homogén, rugalmas, lágy tésztát kapunk.",
+    "Lefedve legalább 30 percig állni hagyjuk. De ha van több idő, állhat többet is, csak jobb lesz. Pihentetés után diónyi golyókat formázunk belőle a tenyerünkkel. Lisztezett deszkán kb 1 mm vastagságúra nyújtjuk.",
+    "Szárazon felhevítünk egy palacsintasütőt és belerakjuk a kinyújtott lepényt. Arra ügyeljünk, hogy a felesleges lisztet a két tenyerünk között csapkodjuk le a lepényről, hogy ne égjen sütés közben. Amikor elkezd hólyagosodni (kb 1 perc után) a szélein nyomkodjuk le falapáttal (ettől szépen fel fog fújódni az egész lepény) és fordítsuk meg. Pár másodperc után ez az oldal is megpirul.",
+    "A kész lepény mindkét oldalát kenjük meg vajjal.",
+    "Összekeverjük a liszteket a sóval majd hozzáadjuk a vizet. Elkezdjük kézzel összegyúrni a tésztát. Ha túl lágynak, ragacsosnak érezzük, akkor plusz fehér liszt hozzáadásával javíthatunk az állagán. 2-3 perc gyúrás után szép homogén, rugalmas, lágy tésztát kapunk.",
+    "Lefedve legalább 30 percig állni hagyjuk. De ha van több idő, állhat többet is, csak jobb lesz. Pihentetés után diónyi golyókat formázunk belőle a tenyerünkkel. Lisztezett deszkán kb 1 mm vastagságúra nyújtjuk.",
+    "Szárazon felhevítünk egy palacsintasütőt és belerakjuk a kinyújtott lepényt. Arra ügyeljünk, hogy a felesleges lisztet a két tenyerünk között csapkodjuk le a lepényről, hogy ne égjen sütés közben. Amikor elkezd hólyagosodni (kb 1 perc után) a szélein nyomkodjuk le falapáttal és fordítsuk meg. Pár másodperc után ez az oldal is megpirul.",
+    "Összekeverjük a liszteket a sóval majd hozzáadjuk a vizet és az olajat. Elkezdjük kézzel összegyúrni a tésztát. Ha túl lágynak, ragacsosnak érezzük, akkor plusz liszt hozzáadásával javíthatunk az állagán. 2-3 perc gyúrás után szép homogén, rugalmas, lágy tésztát kapunk.",
+    "Lefedve legalább 30 percig állni hagyjuk. De ha van több idő, állhat többet is, csak jobb lesz. Pihentetés után a tésztát lisztezett felületre borítsuk ki és osszuk négy-öt részre. Formázzunk belőle golyókat a tenyerünkkel és nyújtsuk ki kb 2-3 mm vastagságúra.",
+    "Szárazon felhevítünk egy palacsintasütőt és belerakjuk a kinyújtott lepényt. Amikor elkezd hólyagosodni (kb 2 perc után) a szélein nyomkodjuk le falapáttal, ettől szépen elkezd felfújódni, majd fordítsuk meg. A másik oldala már kicsivel rövidebb idő alatt meg fog pirulni.",
+    "Összekeverjük a liszteket a kókusszal és a sóval majd hozzáadjuk a vizet és a kókusztejet. Elkezdjük kézzel összegyúrni a tésztát. Ha túl lágynak, ragacsosnak érezzük, akkor plusz liszt, ha száraz plusz víz/kókusztej hozzáadásával javíthatunk az állagán. 2-3 perc gyúrás után szép homogén, rugalmas, lágy tésztát kapunk.",
+    "Lefedve legalább 30 percig állni hagyjuk. De ha van több idő, állhat többet is, csak jobb lesz. Könnyen kezelhető, nem ragacsos tésztát kell kapjunk. Pihentetés után a tésztát lisztezett felületre borítsuk ki és osszuk hat részre. Formázzunk belőle golyókat a tenyerünkkel és nyújtsuk ki kb. 2 mm vastagságúra.",
+    "Szárazon felhevítünk egy palacsintasütőt és belerakjuk a kinyújtott lepényt. Amikor elkezdt hólyagosodni (kb 2 perc után) a szélein nyomkodjuk le falapáttal, ettől szépen elkezd felfújódni, majd fordítsuk meg. A piruló kókusz illata is jelzi, hogy készen van, ideje megfordítani. A másik oldala már kicsivel rövidebb idő alatt meg fog pirulni. Kellemes pirult kókusz illat tölti be a konyhát mire végzünk, nehéz neki ellenállni."
+  ],
+  "category": "Kenyérfélék",
+  "yields": "10 items",
+  "description": "Az élesztős lepényeket is szívesen kipróbálnád? Egy friss puha házi naan vagy pita? A recepteket itt találod: Villámgyors lepények II. - élesztős változatok 1.Csapáti (chapati) Az egyik legegyszerűbb indiai lepény, roti néven is ismert, úgy is találkozhatsz vele. 2. Tortilla Ha már ettél bármilyen mexikói gyorsétteremben akkor biztos, hogy találkoztál vele, de a boltok polcain is megtalálod a csomagolt verziót. Készülhet sima lisztből vagy kukoricalisztből, nekem utóbbival az igazi és úgy a gluténtartalma is jóval alacsonyabb. 3. Olívaolajos lepény A három lepény közül ezt a legkönnyebb formázni és sütni is. Hidd el, akkor sem fog problémát okozni, ha életedben először sütsz lepénykenyeret. Egyszerűbb és gyorsabban készen is van, mint egy pita, de ugyanolyan jól passzol egy házi gyros mellé vagy kerti sütögetéskor grillezett húsok, saláták, mártogatósok mellé. Utóbbi esetben a grillrácson is süthetjük. Bármilyen kenegetős mellé is remek választás, az arabos kencék mellé is szoktuk enni, ahhoz kifejezetten jól áll az enyhe római köményes íze. 4. Kókuszos roti (pol roti, sri lankai lepény) Ha már unjuk a sima lepényeket vagy csak egyszerűen valami újdonságra vágyunk, ideje kipróbálni a Sri lankaiak kókuszos lepényét. Az egyszerű változatban, amihez most a receptet is hozom csak kókusz, liszt, víz és kókusztej (víz is lehet) van. Az extra változatba általában lilahagyma és zöld chili, esetleg curry levél is kerül még. Lenti néhány infó az összes fenti lepényről elmondható. Mennyi idősen: glutén bevezetése után adható, ha a baba már megfelelően tud rágni. Kókuszos rotinál a kókusz és kókusztej is plusz hozzávaló. A lepényt akkor kínáljuk neki, ha már ezekkel is megismertettük a babát. Mindig vedd figyelembe, hogy a te babád miket eszik, milyen alapanyagokat vezettél már be neki! Elkészítési idő: 5 perc + 20-30 perc pihentetés + 10-15 perc sütés Különleges alapanyag: kókusztej a kókuszos rotinál (Spájz rovatban olvashatsz róla)",
+  "total_time": 48,
+  "cook_time": 15,
+  "prep_time": 3,
+  "image": "https://www.izutazo.hu/wp-content/uploads/2022/06/csapati-500x375.jpg"
+}

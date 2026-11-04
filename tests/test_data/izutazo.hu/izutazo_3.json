@@ -1,0 +1,56 @@
+{
+  "author": "Ízutazó",
+  "canonical_url": "https://www.izutazo.hu/index.php/recipe/malnas-csokis-muffin/",
+  "site_name": "Ízutazó",
+  "host": "izutazo.hu",
+  "language": "hu",
+  "title": "Málnás-csokis muffin",
+  "ingredients": [
+    "3 db nagyon érett banán",
+    "125 g friss vagy fagyasztott málna",
+    "100 g zabpehelyliszt",
+    "100 g sima búzaliszt",
+    "25 g őrölt mandula (vagy liszt helyette)",
+    "4 tk holland kakaópor",
+    "2 db tojás",
+    "100 ml semleges ízű olaj",
+    "130 ml natúr joghurt",
+    "1 tk szódabikarbóna",
+    "1 tk sütőpor",
+    "100 g darabolt étcsöki",
+    "csipet só"
+  ],
+  "ingredient_groups": [
+    {
+      "ingredients": [
+        "3 db nagyon érett banán",
+        "125 g friss vagy fagyasztott málna",
+        "100 g zabpehelyliszt",
+        "100 g sima búzaliszt",
+        "25 g őrölt mandula (vagy liszt helyette)",
+        "4 tk holland kakaópor",
+        "2 db tojás",
+        "100 ml semleges ízű olaj",
+        "130 ml natúr joghurt",
+        "1 tk szódabikarbóna",
+        "1 tk sütőpor",
+        "100 g darabolt étcsöki",
+        "csipet só"
+      ],
+      "purpose": null
+    }
+  ],
+  "instructions_list": [
+    "A sütőt előmelegítjük 180 fokra. Ha fagyasztott málnát használunk, akkor kivesszük a hűtőből és csak annyira hagyjuk kiolvadni, hogy a szemek ne legyenek összetapadva.",
+    "A banánokat villával összenyomkodjuk/aprítóban pürésítjük, hozzákeverjük a nedves hozzávalókat. Egy másik tálban összekeverjük a száraz hozzávalókat és több részletben beleforgatjuk a banános keverékbe. Belekeverjük az aprított étcsokit és néhány gyors mozdulattal a málnát is beleforgatjuk.",
+    "A keveréket papírral kibélelt vagy kivajazott és lisztezett muffin forma mélyedéseibe töltjük úgy bő 2/3-ig. Az előmelegített sütőben kb. 25 percig sütjük. (Közben pedig tessék megállni, hogy ne nyitogassuk a sütőt, meg akkor \"szépen\" össze fognak esni!) Tűpróbával ellenőrizzük, hogy elkészültek-e: ha már nem ragad rá a tészta, akkor elkészült! Extra adag friss gyümölccsel tálaljuk."
+  ],
+  "category": "Desszertek, Tízórai és uzsonna",
+  "yields": "15 items",
+  "description": "Különleges alapanyag: nincs",
+  "total_time": 35,
+  "cook_time": 25,
+  "prep_time": 10,
+  "cuisine": "fúziós/modern nemzetközi",
+  "image": "https://www.izutazo.hu/wp-content/uploads/2026/05/malnascsokis_muffin-500x500.jpg"
+}

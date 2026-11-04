@@ -1,0 +1,44 @@
+{
+  "author": "Ízutazó",
+  "canonical_url": "https://www.izutazo.hu/index.php/recipe/klasszikus-tejfolos-zoldbableves/",
+  "site_name": "Ízutazó",
+  "host": "izutazo.hu",
+  "language": "hu",
+  "title": "Klasszikus tejfölös zöldbableves",
+  "ingredients": [
+    "500 g zöldbab (sárga színű)",
+    "víz/alaplé",
+    "200 g tejföl",
+    "1.5 ek sima búzaliszt",
+    "1 db kicsi babérlevél",
+    "1 ek borecet (vagy ecet/almaecet, ízlés szerint)",
+    "só"
+  ],
+  "ingredient_groups": [
+    {
+      "ingredients": [
+        "500 g zöldbab (sárga színű)",
+        "víz/alaplé",
+        "200 g tejföl",
+        "1.5 ek sima búzaliszt",
+        "1 db kicsi babérlevél",
+        "1 ek borecet (vagy ecet/almaecet, ízlés szerint)",
+        "só"
+      ],
+      "purpose": null
+    }
+  ],
+  "instructions_list": [
+    "A zöldbabot megtisztítjuk, falatnyi darabokra vágjuk, majd egy lábasba tesszük. Felöntjük annyi vízzel vagy alaplével, hogy éppen ellepje, hozzáadjuk a sót és a babérlevelet. Közepes lángon puhára főzzük a zöldbabot.",
+    "A tejfölt simára keverjük a liszttel, majd egy kevés forró levessel hőkiegyenlítjük. Folyamatos keverés mellett a leveshez öntjük, és még 2–3 percig főzzük, amíg kissé besűrűsödik. Ha túl sűrűnek érezzük vízzel hígíthatjuk.",
+    "Tálalás előtt a babérlevelet eltávolítjuk, kevés ecettel frissítjük és friss kenyérrel kínáljuk."
+  ],
+  "category": "Levesek, főzelékek",
+  "yields": "4 servings",
+  "description": "Klasszikus tejfölös zöldbableves",
+  "total_time": 30,
+  "cook_time": 20,
+  "prep_time": 10,
+  "cuisine": "magyar",
+  "image": "https://www.izutazo.hu/wp-content/uploads/2026/08/zoldbableves-500x500.jpg"
+}

@@ -310,6 +310,7 @@ from .iowagirleats import IowaGirlEats
 from .irishcentral import IrishCentral
 from .itdoesnttastelikechicken import ItDoesntTasteLikeChicken
 from .itsnotaboutnutrition import ItsNotAboutNutrition
+from .izutazo import Izutazo
 from .izzycooking import IzzyCooking
 from .jamieoliver import JamieOliver
 from .jennycancook import JennyCanCook
@@ -1058,6 +1059,7 @@ SCRAPERS = {
     IrishCentral.host(): IrishCentral,
     ItDoesntTasteLikeChicken.host(): ItDoesntTasteLikeChicken,
     ItsNotAboutNutrition.host(): ItsNotAboutNutrition,
+    Izutazo.host(): Izutazo,
     IzzyCooking.host(): IzzyCooking,
     JamieOliver.host(): JamieOliver,
     JennyCanCook.host(): JennyCanCook,

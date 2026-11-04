@@ -1,0 +1,65 @@
+{
+  "author": "Ízutazó",
+  "canonical_url": "https://www.izutazo.hu/index.php/recipe/sult-camembert-nektarinnal-es-bazsalikomos-paradicsomsalsaval/",
+  "site_name": "Ízutazó",
+  "host": "izutazo.hu",
+  "language": "hu",
+  "title": "Sült camembert nektarinnal és bazsalikomos paradicsomsalsával",
+  "ingredients": [
+    "1 db kecske camembert vagy sima camembert (250 g)",
+    "2 db nektarin/őszibarack",
+    "2 ek olívaolaj",
+    "20 g vaj",
+    "1 gerezd fokhagyma",
+    "néhány friss kakukkfű ág",
+    "só, frissen őrölt bors",
+    "darabolt chili (ízlés szerint)",
+    "néhány szelet pirítós a tálaláshoz",
+    "2 db kisebb paradicsom (vagy 6-8 koktélparadicsom)",
+    "0.5 fej lilahagyma",
+    "0.5 ek citromlé",
+    "1 kk cukor",
+    "néhány bazsalikomlevél"
+  ],
+  "ingredient_groups": [
+    {
+      "ingredients": [
+        "1 db kecske camembert vagy sima camembert (250 g)",
+        "2 db nektarin/őszibarack",
+        "2 ek olívaolaj",
+        "20 g vaj",
+        "1 gerezd fokhagyma",
+        "néhány friss kakukkfű ág",
+        "só, frissen őrölt bors",
+        "darabolt chili (ízlés szerint)",
+        "néhány szelet pirítós a tálaláshoz"
+      ],
+      "purpose": null
+    },
+    {
+      "ingredients": [
+        "2 db kisebb paradicsom (vagy 6-8 koktélparadicsom)",
+        "0.5 fej lilahagyma",
+        "0.5 ek citromlé",
+        "1 kk cukor",
+        "néhány bazsalikomlevél"
+      ],
+      "purpose": "Hozzávalók a paradicsom salsához"
+    }
+  ],
+  "instructions_list": [
+    "A sütőt 200 °C-ra előmelegítjük. A camembert tetejét éles késsel bevagdossuk, sütőtálba tesszük, majd megkenjük az egy evőkanál olívaolaj, a zúzott fokhagyma, só, bors és egy kevés chili keverékével.",
+    "A nektarinokat kimagozzuk és vékony cikkre vágjuk. majd sütőtálba tesszük, és meglocsoljuk az olvasztott vajjal. A camemberttel együtt a sütőbe tesszük, és kb. 15 percig sütjük, amíg a sajt szépen megolvad, a barackok pedig kissé karamellizálódnak.",
+    "Közben elkészítjük a paradicsomsalsát. A lilahagymát vékonyan felszeleteljük, összeforgatjuk a citromlével és a cukorral, majd néhány percig állni hagyjuk. Ezután hozzáadjuk a felkockázott paradicsomot és a tépkedett bazsalikomleveleket.",
+    "A kakukkfüves olajhoz a friss kakukkfű leveleit lecsipkedjük, kissé összemorzsoljuk, majd elkeverjük egy evőkanál olívaolajjal. A sült barackot meglocsoljuk a kakukkfüves olajjal.",
+    "A frissen sült camembert mellé pirítóst tálalunk, ráhalmozzuk a sült nektarint és a bazsalikomos paradicsomsalsát. Melegen, azonnal tálaljuk, hogy a camembert még krémesen folyós legyen."
+  ],
+  "category": "Sajtok, Szendvicsek",
+  "yields": "2 servings",
+  "description": "Sült camembert nektarinnal és bazsalikomos paradicsomsalsával",
+  "total_time": 25,
+  "cook_time": 15,
+  "prep_time": 10,
+  "cuisine": "fúziós/modern nemzetközi",
+  "image": "https://www.izutazo.hu/wp-content/uploads/2026/08/camembert_barack-500x500.jpg"
+}
