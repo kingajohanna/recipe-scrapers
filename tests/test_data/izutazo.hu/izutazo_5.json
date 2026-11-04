@@ -1,0 +1,71 @@
+{
+  "author": "Ízutazó",
+  "canonical_url": "https://www.izutazo.hu/index.php/recipe/aloo-gobi-indiai-krumplis-karfiolos-ragu/",
+  "site_name": "Ízutazó",
+  "host": "izutazo.hu",
+  "language": "hu",
+  "title": "Aloo gobi, indiai krumplis-karfiolos ragu",
+  "ingredients": [
+    "0.5 fej karfiol (kb. 300-400 g, kisebb rózsákra szedve)",
+    "2 db krumpli (kb. 250-300 g, felkockázva)",
+    "2 ek olaj",
+    "1 gerezd fokhagyma",
+    "0.5 tk őrölt koriander",
+    "1 tk őrölt római kömény",
+    "0.5 tk egész római kömény",
+    "1 kk kurkuma",
+    "0.5 tk darabolt chili (ízlés szerint)",
+    "1 dl víz (vagy amennyi kell a pároláshoz)",
+    "pár csepp citromlé",
+    "1 marék aprított petrezselyem (vagy friss koriander, ha van)",
+    "1 marék durvára vágott kesudió (pirítva még jobb)",
+    "2 db közepes retek (kb. 80-100 g, reszelve és kinyomkodva, uborkával is helyettesíthető)",
+    "150 g natúr vagy görög joghurt",
+    "0.5 ek citromlé",
+    "0.5 ek frissen aprított petrezselyem",
+    "só, frissen őrölt bors"
+  ],
+  "ingredient_groups": [
+    {
+      "ingredients": [
+        "0.5 fej karfiol (kb. 300-400 g, kisebb rózsákra szedve)",
+        "2 db krumpli (kb. 250-300 g, felkockázva)",
+        "2 ek olaj",
+        "1 gerezd fokhagyma",
+        "0.5 tk őrölt koriander",
+        "1 tk őrölt római kömény",
+        "0.5 tk egész római kömény",
+        "1 kk kurkuma",
+        "0.5 tk darabolt chili (ízlés szerint)",
+        "1 dl víz (vagy amennyi kell a pároláshoz)",
+        "pár csepp citromlé",
+        "1 marék aprított petrezselyem (vagy friss koriander, ha van)",
+        "1 marék durvára vágott kesudió (pirítva még jobb)"
+      ],
+      "purpose": null
+    },
+    {
+      "ingredients": [
+        "2 db közepes retek (kb. 80-100 g, reszelve és kinyomkodva, uborkával is helyettesíthető)",
+        "150 g natúr vagy görög joghurt",
+        "0.5 ek citromlé",
+        "0.5 ek frissen aprított petrezselyem",
+        "só, frissen őrölt bors"
+      ],
+      "purpose": "Hozzávalók a retkes raitához"
+    }
+  ],
+  "instructions_list": [
+    "A kesudiót egy száraz serpenyőben lepirítjuk és félretesszük. A serpenyőben forrósítsuk fel az olajat, és adjuk hozzá az egész római köményt. Amikor pattogni és illatozni kezd, adjuk hozzá az aprított fokhagymát az őrölt római köményt, koriandert, kurkumát és chilit. Alacsony hőfokon hagyjuk, amíg illatozni kezdenek.",
+    "Adjuk hozzá a krumplit és kevergetve kicsit pirítsuk 3-4 percig. Dobjuk hozzá a karfiolt is és öntsük fel kevés vízzel (kb. 1 dl) és közepes lángon pároljuk 10-15 percig, amíg a zöldségek megpuhulnak, de még nem esnek szét. Ha már előre megfőzött karfiolt és krumplit használunk, akkor 5 percig elég együtt párolni, hogy az ízek összeérjenek.",
+    "Amíg készül a ragu elkészítjük a raitát. A retket lereszeljük, és ha túl lédús, kicsit kinyomkodjuk. Keverjük össze a joghurttal, citromlével, petrezselyemmel, sózzuk és 10-15 percig állni hagyjuk, hogy összeérjenek az ízek.",
+    "Ha kész a ragu, locsoljuk meg pár csepp citromlével, szórjuk rá az aprított petrezselymet és a pirított kesudiót."
+  ],
+  "category": "Zöldséges ételek",
+  "yields": "3 servings",
+  "description": "A teljes értékű ebédhez, vacsorához a raita mellé kínáljuk frissen sült házi lepénnyel, azzal a ragut és a joghurtos szószt is jól lehet tunkolni. Az igazi egy indiai naan kenyérrel: Recept Különleges alapanyag: nincs",
+  "total_time": 30,
+  "prep_time": 30,
+  "cuisine": "indiai",
+  "image": "https://www.izutazo.hu/wp-content/uploads/2025/03/aloogobi-500x500.jpg"
+}
